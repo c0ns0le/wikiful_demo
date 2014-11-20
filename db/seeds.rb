@@ -8,11 +8,11 @@ categories = Category.create([
 		{ name: 'Sociology'}, {name: 'Chemistry'}
 	])
 
-# create 50 articles, with random titles, 250 words of content, and
+# create 50 articles, with random titles, 20 paragraphs, and
 # randomly assign one of the categories above to each article
 for i in 0..49
 	title = Faker::Lorem.sentence(rand(2..10)).chomp('.')
-	content = Faker::Lorem.paragraph(50) # number of paragraphs
+	content = Faker::Lorem.paragraph(20) # number of paragraphs
 
 	# Randomly assign one of the categories we just created.
   # The 'sample' method selects a random item from a collection.
